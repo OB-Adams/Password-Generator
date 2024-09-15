@@ -10,7 +10,15 @@
     <div id="container">
       <h1>PASSWORD GENERATOR</h1>
       <label for="slider">LENGTH (MIN:4, MAX: 20)</label>
-      <input id="slider" type="range" min="0" max="18" name="slider" step="1" value="8" />
+      <input
+        id="slider"
+        type="range"
+        min="0"
+        max="18"
+        name="slider"
+        step="1"
+        value="10"
+      />
 
       <label for="uppercase">
         <input type="checkbox" name="uppercase" id="uppercase" />UPPERCASE
@@ -26,9 +34,11 @@
       <label for="special">
         <input type="checkbox" name="special" id="special" />SPECIAL CHARACTERS
       </label>
-
       <button id="generate">GENERATE PASSWORD</button>
-      <p id="password"></p>
+      <div id="password-box">
+        <p id="password"></p>
+      </div>
+      <p id="message"></p>
     </div>
   </body>
   <script src="script.js"></script>

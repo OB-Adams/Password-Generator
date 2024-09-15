@@ -1,11 +1,12 @@
 const generateBtn = document.getElementById("generate");
-generateBtn.addEventListener("click", () => {
-  const password = document.querySelector("#password");
+const password = document.querySelector("#password");
+const message = document.querySelector("#message");
 
+generateBtn.addEventListener("click", () => {
   const uppercaseCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   const lowercaseCharacters = "abcdefghijklmnopqrstuvwxyz";
   const digitCharacters = "1234567890";
-  const specialCharacters = "!@#$%^&*()-_+={}[]|\;:/?.>,<'";
+  const specialCharacters = "!@#$%^&*()-_+={}[]|;:/?.>,<'";
 
   let charset = "";
   let generatedPassword = "";
@@ -32,3 +33,48 @@ generateBtn.addEventListener("click", () => {
     password.textContent = generatedPassword;
   }
 });
+
+password.addEventListener("click", () => {
+  navigator.clipboard
+    .writeText(password.textContent)
+    .then(() => {
+      message.textContent = "Copied!";
+      message.style.color = 'green'
+
+      setTimeout(() => {
+        message.textContent = "";
+      }, 1500);
+    })
+    .catch((err) => (message.textContent = "Failed to copy!"));
+});
+
+// copyBtn.addEventListener("click", () => {
+//   if (password.textContent.length > 0) {
+//     navigator.clipboard
+//       .writeText(password.textContent)
+//       .then(() => {
+//         message.textContent = "Copied to clipboard!";
+//         message.style.color = "green";
+
+//         setTimeout(() => {
+//           message.textContent = "";
+//         }, 1500);
+//       })
+//       .catch((err) => {
+//         message.textContent = -"Failed to copy password!";
+//         message.style.color = "red";
+
+//         setTimeout(() => {
+//           message.textContent = "";
+//         }, 1500);
+//         console.log(err.message);
+//       });
+//   } else {
+//     message.textContent = "No message to copy!";
+//     message.style.color = "red";
+
+//     setTimeout(() => {
+//       message.textContent = "";
+//     }, 1500);
+//   }
+// });

@@ -18,14 +18,14 @@ body {
 #container {
   background-color: white;
   display: flex;
-  flex-direction: column;
   padding: 20px;
+  flex-direction: column;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 400px;
   text-align: left;
-  margin-top: -8rem;
+  margin-top: 0rem;
 }
 
 h1 {
@@ -33,6 +33,36 @@ h1 {
   text-align: center;
   margin-bottom: 20px;
   color: #333;
+}
+
+
+#password-box {
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 0.5rem;
+  align-self: center;
+  width: 100%;
+  border-radius: 0.65rem;
+  padding-block: 0.5rem;
+}
+
+#password {
+  margin-top: 0px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  word-wrap: break-word;
+  color: #333;
+  align-self: center;
+}
+
+#message {
+  align-self: center;
+  margin-top: 0.5rem;
+  margin-right: 0rem;
+  font-size: 0.9rem;
+  height: 0.9rem;
 }
 
 label[for=slider] {
@@ -74,14 +104,6 @@ button:hover {
   background-color: #0056b3;
 }
 
-#password {
-  margin-top: 20px;
-  font-size: 1.2rem;
-  font-weight: bold;
-  word-wrap: break-word;
-  color: #333;
-  align-self: center;
-}
 
 /* Media queries for tablets */
 @media (min-width: 600px) {
@@ -89,6 +111,7 @@ button:hover {
     padding: 30px;
     max-width: 500px;
     margin-top: 0rem;
+    padding-bottom: 10px;
   }
 
   h1 {
@@ -111,6 +134,7 @@ button:hover {
     padding: 40px;
     max-width: 600px;
     margin-top: 0rem;
+    padding-bottom: 10px;
   }
 
   h1 {
