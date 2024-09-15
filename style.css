@@ -38,6 +38,7 @@ h1 {
 
 #password-box {
   height: 2rem;
+  position: relative;
   display: flex;
   justify-content: center;
   text-align: center;
@@ -58,7 +59,8 @@ h1 {
 }
 
 #message {
-  align-self: center;
+  position: absolute;
+  top: 1.4rem;
   margin-top: 0.5rem;
   margin-right: 0rem;
   font-size: 0.9rem;
@@ -111,7 +113,7 @@ button:hover {
     padding: 30px;
     max-width: 500px;
     margin-top: 0rem;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
   }
 
   h1 {
@@ -134,7 +136,7 @@ button:hover {
     padding: 40px;
     max-width: 600px;
     margin-top: 0rem;
-    padding-bottom: 10px;
+    padding-bottom: 30px;
   }
 
   h1 {
@@ -144,6 +146,10 @@ button:hover {
   button {
     padding: 14px 28px;
     font-size: 1.2rem;
+  }
+
+  #message {
+  top: 1.7rem;
   }
 
   #password {
